@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Create Image";
+}
+
+<h2>Create</h2>
+<hr />
+<form method ="post" asp-action="Create" enctype="multipart/form-data">
+    <div class="custom-file">
+        <input type="file" class="custom-file-input" accept="image/*" />
+        <label class="custom-file-input">Select File</label>
+    </div>
+    <button type="submit" class="btn btn-primary mt-4">Save</button>
+    <a asp-action="Index" calss="btn btn-outline-secondary  mt-4">Cancel</a>
+</form>

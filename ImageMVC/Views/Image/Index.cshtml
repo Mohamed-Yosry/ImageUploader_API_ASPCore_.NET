@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ImageModel>
+
+@{
+    ViewBag.Title = "All Images Data";
+}
+
+<h2>Index</h2>
+<hr />
+
+<table class="table">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilePath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InsertionDate)
+            </td>
+        </tr>
+    }
+</table>
+
+<a asp-action="Create" >Create Image</a>
